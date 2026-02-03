@@ -46,8 +46,8 @@
 ### Install from source
 
 ```bash
-git clone https://github.com/yourusername/AIether.git
-cd AIether/AIether_Refactored
+git clone https://github.com/Rochafurada/AIether.git
+cd AIether/aiether
 pip install -r requirements.txt
 ```
 
@@ -335,21 +335,6 @@ manager.save_state(layer_id=0, state_name="L0", state_dict=state, step=100)
 
 ---
 
-## 📄 Citation
-
-If you use AIether in your research, please cite:
-
-```bibtex
-@article{rocha2025aiether,
-  title={AIether: Procedural Growth of Neural Networks via Adaptive Geometric Extrapolation},
-  author={Rocha, Samuel},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2025}
-}
-```
-
----
-
 ## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -376,5 +361,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [ ] Pre-trained model zoo
 
 ---
+### 📝 Transparency Note
+
+The core algorithms, mathematical derivations, and code implementation in this repository are original works by the author. The English translation of code comments, documentation sections, and the technical report was refined with the assistance of **Anthropic's Claude** to ensure linguistic precision and adherence to academic standards.
 
 **Made with ❤️ for the deep learning research community**
