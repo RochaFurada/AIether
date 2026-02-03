@@ -10,7 +10,7 @@ To ensure a fair and rigorous comparison, all experiments were conducted under i
 * **Time Constraint:** Strict **12-hour hard cutoff** per run.
 * **Dataset:** A random 400M token shard of **FineWebEdu**.
 * **Methodology:**
-    * **Baseline:** Standard Transformer with **3 Layers** (Fixed).
+    * **Baseline:** GPT-2 Standard Transformer with **3 Layers** (Fixed).
     * **AIether:** Dynamic Transformer starting with **1 Layer** and growing based on geometric stagnation metrics ($\tau, \kappa$).
     * **Reproducibility:** The results presented below represent the **median performance** derived from >5 independent runs with different random seeds.
 
@@ -20,7 +20,7 @@ To ensure a fair and rigorous comparison, all experiments were conducted under i
 
 One of the core advantages of AIether is "Orthogonal Scalability"—the ability to train faster in early stages by utilizing a smaller topology.
 
-![Steps Per Second](assets/plots/eval_steps.jpg)
+![Steps Per Second](assets/plots/eval_steps.png)
 *Figure 1: Evaluation Steps per Second over training duration.*
 
 **Analysis:**
@@ -35,11 +35,11 @@ One of the core advantages of AIether is "Orthogonal Scalability"—the ability 
 Despite starting with only 33% of the Baseline's capacity, AIether demonstrates remarkable recovery and convergence capabilities.
 
 ### Evaluation Loss
-![Eval Loss](assets/plots/eval_loss.jpg)
+![Eval Loss](assets/plots/eval_loss.png)
 *Figure 2: Validation Loss comparison on FineWebEdu.*
 
 ### Training Loss
-![Train Loss](assets/plots/train_loss.jpg)
+![Train Loss](assets/plots/train_loss.png)
 *Figure 3: Training Loss comparison.*
 
 **Critical Observation on "Premature Growth":**
@@ -53,7 +53,7 @@ Due to the strict **12-hour time limit**, the AIether growth hyperparameters wer
 
 A major concern with dynamic architectures is the shock to the optimization landscape during growth events.
 
-![Gradient Norm](assets/plots/gradient.jpg)
+![Gradient Norm](assets/plots/gradient.png)
 *Figure 4: Gradient Norm stability throughout training.*
 
 **Analysis:**
