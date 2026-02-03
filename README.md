@@ -4,6 +4,9 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+[**📄 Read the Technical Report (PDF)**](./AIether_Technical_Report.pdf)
+
+
 **AIether** is a procedural growth system for deep neural networks that uses adaptive geometric extrapolation to intelligently expand model architectures during training. By analyzing the optimization trajectory's geometric properties, AIether can detect stagnation and initialize new layers in informed regions of parameter space.
 
 ---
@@ -47,7 +50,7 @@
 
 ```bash
 git clone https://github.com/Rochafurada/AIether.git
-cd AIether/aiether
+cd AIether
 pip install -r requirements.txt
 ```
 
@@ -121,25 +124,23 @@ Where:
 ## 🏗️ Architecture
 
 ```
-AIether_Refactored/
-├── aiether/
-│   ├── callbacks/          # Training callbacks
-│   │   ├── procedural_growth_callback.py
-│   │   └── debug_callback.py
-│   ├── managers/           # State management
-│   │   ├── growth_manager.py
-│   │   └── layer_state_manager.py
-│   ├── models/             # Model implementations
-│   │   └── gpt.py
-│   ├── training/           # Training orchestration
-│   │   └── trainer.py
-│   └── utils/              # Core utilities
-│       ├── geometry.py     # Geometric extrapolation
-│       ├── config.py       # Configuration parsing
-│       └── logging.py      # Custom logging
+AIether/
+├── callbacks/          # Training callbacks
+│   ├── procedural_growth_callback.py
+│   └── debug_callback.py
+├── managers/           # State management
+│   ├── growth_manager.py
+│   └── layer_state_manager.py
+├── models/             # Model implementations
+│   └── gpt.py
+├── training/           # Training orchestration
+│   └── trainer.py
+├── utils/              # Core utilities
+│   └── geometry.py     # Geometric extrapolation
+│   └── config.py       # Configuration parsing
+│   └── logging.py      # Custom logging
 ├── scripts/
-│   └── train.py           # Training entry point
-└── README.md
+│   └── train.py        # Training entry point
 ```
 
 ---
@@ -261,6 +262,8 @@ python scripts/train.py --beta0 0.1 --gamma0 0.15 --eta0 0.03
 ## 🔬 Mathematical Foundation
 
 The complete mathematical formulation is available in our technical paper. Key concepts:
+
+[**👉 Download Full Technical Report**](./AIether_Technical_Report.pdf)
 
 ### Trajectory Metrics
 
