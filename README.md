@@ -1,10 +1,10 @@
 # AIether: Procedural Growth of Neural Networks via Adaptive Geometric Extrapolation
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<div align="center">
 
-[**📄 Read the Technical Report (PDF)**](./AIether_Technical_Report.pdf)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/) [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![📄 Read Technical Report](https://img.shields.io/badge/📄_Read_Technical_Report-blue?style=for--the--badge)](./AIether_Technical_Report.pdf)
+
+</div>
 
 
 **AIether** is a procedural growth system for deep neural networks that uses adaptive geometric extrapolation to intelligently expand model architectures during training. By analyzing the optimization trajectory's geometric properties, AIether can detect stagnation and initialize new layers in informed regions of parameter space.
