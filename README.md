@@ -344,7 +344,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 ## 🙏 Acknowledgments
-
+- **Andrej Karpathy** for the [nanoGPT](https://github.com/karpathy/nanoGPT) project, which provided the clean, minimal GPT implementation that serves as the structural backbone of this framework.
 - Hugging Face team for the transformers library
 - PyTorch team for the deep learning framework
 - The deep learning research community for inspiration and tools
