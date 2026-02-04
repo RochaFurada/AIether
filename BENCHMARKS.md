@@ -28,6 +28,11 @@ One of the core advantages of AIether is "Orthogonal Scalability"—the ability 
 * **Dynamic Adaptation:** As AIether detects complexity requirements, it grows to match the Baseline's depth. Note the sharp adjustment around step 3.2k and 6.5k.
 * **Compute Savings:** By processing the early, simpler patterns of the dataset with a shallower network, AIether significantly reduces the total FLOPs required to reach the same training step.
 
+Driven by the superior throughput in the initial phase (~4.85 vs ~3.88 steps/sec), AIether executed approximately **900 additional optimization steps** within the rigid 12-hour window (reaching step ~8,200 compared to the Baseline's ~7,300). This translates to a **~12% gain in total training volume** at no additional temporal cost.
+
+Furthermore, it is crucial to note that this experiment utilized a compact architecture (~40M parameters). The efficiency gains of the paradigm are expected to scale non-linearly with model size. For larger architectures (e.g., 80M+ parameters), the computational disparity between the initial minimal topology and the final dense topology widens significantly. Consequently, the relative volume gain would likely be even more pronounced in larger regimes, where the early-stage computational savings represent a larger fraction of the total training budget.
+
+
 ---
 
 ## 3. Convergence & Loss Dynamics
@@ -43,7 +48,7 @@ Despite starting with only 33% of the Baseline's capacity, AIether demonstrates 
 *Figure 3: Training Loss comparison.*
 
 **Critical Observation on "Premature Growth":**
-Due to the strict **12-hour time limit**, the AIether growth hyperparameters were tuned for **accelerated/premature expansion**. The model was forced to grow before fully saturating the information capacity of the 1-layer regime.
+Due to the strict **12-hour time limit**, the AIether growth hyperparameters were tuned for **accelerated/premature expansion**. The model was forced to grow before fully saturating the information capacity of all its layers.
 * **Result:** Even with this handicap, AIether tracks the Baseline's loss curve almost perfectly.
 * **Context:** In separate experiments with smaller datasets and relaxed time constraints (allowing for 4+ layers and full saturation), AIether consistently **outperforms** static baselines. The slight gap at the end of Figure 2 is an artifact of the rushed growth schedule necessitated by the runtime limit.
 
