@@ -25,7 +25,6 @@
 - **🧮 Spectral Decomposition**: Uses SVD to identify productive directions in parameter space and construct informed initializations
 - **🎯 Automatic Stagnation Detection**: Monitors training quality and triggers architectural expansion when plateaus are detected
 - **⚡ Tensor-Agnostic**: Handles 2D weight matrices and 1D bias vectors uniformly with multi-scale adaptive coefficients
-- **🔌 Seamless Integration**: Compatible with Hugging Face Trainer and standard PyTorch training loops
 
 ---
 
